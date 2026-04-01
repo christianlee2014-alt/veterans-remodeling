@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterans Remodeling & Plumbing Services | Trusted Home Experts</title>
+    <meta name="description" content="Veteran-owned plumbing and remodeling services. Water heaters, leak repair, bathroom remodeling & more. Licensed, insured, and trusted by hundreds of homeowners.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --navy: #0a1628;
+            --navy-light: #111d33;
+            --gold: #c9a84c;
+            --gold-light: #e2c36b;
+            --gold-dark: #a68a3a;
+            --white: #ffffff;
+            --gray-100: #f7f8fa;
+            --gray-200: #e8eaed;
+            --gray-300: #c4c8cf;
+            --gray-600: #6b7280;
+            --gray-800: #1f2937;
+            --red: #b91c1c;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ========== UTILITY ========== */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .section-pad { padding: 100px 0; }
+        .text-gold { color: var(--gold); }
+        .text-navy { color: var(--navy); }
+        .text-center { text-align: center; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--navy);
+            box-shadow: 0 4px 20px rgba(201,168,76,0.4);
+        }
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201,168,76,0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--gold);
+        }
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-navy {
+            background: var(--navy);
+            color: var(--white);
+        }
+        .btn-navy:hover {
+            background: var(--navy-light);
+            transform: translateY(-2px);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 18px;
+            background: rgba(201,168,76,0.1);
+            border: 1px solid rgba(201,168,76,0.3);
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .section-header {
+            max-width: 700px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+        .section-header .badge { margin-bottom: 16px; }
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        .section-header p {
+            font-size: 18px;
+            color: var(--gray-600);
+            line-height: 1.7;
+        }
+
+        /* ========== TOP BAR ========== */
+        .top-bar {
+            background: var(--navy);
+            color: var(--gray-300);
+            font-size: 13px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .top-bar a {
+            color: var(--gold-light);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .top-bar-right {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        .top-bar-right i { margin-right: 6px; color: var(--gold); }
+
+        /* ========== NAV ========== */
+        .navbar {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--navy), var(--navy-light));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 22px;
+        }
+        .logo-text {
+            line-height: 1.2;
+        }
+        .logo-text .name {
+            font-weight: 800;
+            font-size: 18px;
+            color: var(--navy);
+            display: block;
+        }
+        .logo-text .tagline {
+            font-size: 11px;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-800);
+            font-weight: 500;
+            font-size: 15px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        .nav-links a:hover {
+            color: var(--gold-dark);
+            background: rgba(201,168,76,0.08);
+        }
+        .nav-cta {
+            margin-left: 16px;
+        }
+        .nav-cta .btn {
+            padding: 12px 28px;
+            font-size: 13px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--navy);
+            cursor: pointer;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            position: relative;
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--navy) 0%, #0d2040 50%, #132d4f 100%);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900"><defs><radialGradient id="g" cx="70%" cy="30%"><stop offset="0%" stop-color="%23c9a84c" stop-opacity="0.08"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><rect fill="url(%23g)" width="1440" height="900"/></svg>');
+            background-size: cover;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: linear-gradient(to top, var(--white), transparent);
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content { padding: 40px 0; }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: rgba(201,168,76,0.12);
+            border: 1px solid rgba(201,168,76,0.25);
+            border-radius: 100px;
+            color: var(--gold-light);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 28px;
+        }
+        .hero-badge i { font-size: 14px; }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 5.5vw, 64px);
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-sub {
+            font-size: 19px;
+            color: var(--gray-300);
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 520px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+        }
+        .hero-stat {
+            text-align: left;
+        }
+        .hero-stat .number {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+        }
+        .hero-stat .label {
+            font-size: 13px;
+            color: var(--gray-300);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 40px;
+            width: 100%;
+            max-width: 460px;
+        }
+        .hero-card h3 {
+            color: var(--white);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .hero-card p {
+            color: var(--gray-300);
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+        .hero-card .form-group {
+            margin-bottom: 16px;
+        }
+        .hero-card input,
+        .hero-card select,
+        .hero-card textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .hero-card input::placeholder,
+        .hero-card textarea::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+        .hero-card input:focus,
+        .hero-card select:focus,
+        .hero-card textarea:focus {
+            border-color: var(--gold);
+        }
+        .hero-card select { cursor: pointer; }
+        .hero-card select option { background: var(--navy); color: var(--white); }
+        .hero-card textarea { resize: vertical; min-height: 80px; }
+        .hero-card .btn { width: 100%; justify-content: center; font-size: 16px; padding: 18px; }
+
+        /* ========== TRUST BAR ========== */
+        .trust-bar {
+            background: var(--gray-100);
+            padding: 40px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--gray-800);
+        }
+        .trust-item i {
+            font-size: 20px;
+            color: var(--gold);
+        }
+
+        /* ========== SERVICES ========== */
+        .services { background: var(--white); }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .service-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 16px;
+            padding: 40px 30px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.05));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: var(--gold);
+            margin-bottom: 24px;
+        }
+        .service-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+        .service-card p {
+            color: var(--gray-600);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* ========== WHY US ========== */
+        .why-us {
+            background: linear-gradient(135deg, var(--navy) 0%, #0d2040 100%);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        .why-us::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .why-us .section-header h2 { color: var(--white); }
+        .why-us .section-header p { color: var(--gray-300); }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            position: relative;
+            z-index: 1;
+        }
+        .why-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 36px;
+            transition: all 0.3s ease;
+        }
+        .why-card:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: rgba(201,168,76,0.3);
+            transform: translateY(-4px);
+        }
+        .why-card-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+        .why-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .why-card p {
+            color: var(--gray-300);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* ========== REVIEWS ========== */
+        .reviews { background: var(--gray-100); }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .review-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        .review-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+            border-color: rgba(201,168,76,0.2);
+        }
+        .review-stars {
+            color: var(--gold);
+            font-size: 16px;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+        .review-text {
+            font-size: 15px;
+            color: var(--gray-800);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .review-avatar {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--navy), var(--navy-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .review-name {
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--navy);
+        }
+        .review-source {
+            font-size: 12px;
+            color: var(--gray-600);
+        }
+
+        /* ========== PROCESS ========== */
+        .process-section { background: var(--white); }
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 44px;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+            z-index: 0;
+        }
+        .step {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .step-number {
+            width: 88px;
+            height: 88px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--navy);
+            margin: 0 auto 24px;
+            box-shadow: 0 8px 30px rgba(201,168,76,0.3);
+        }
+        .step h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+        .step p {
+            font-size: 14px;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        /* ========== CTA BANNER ========== */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--navy) 0%, #0d2040 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 400"><defs><radialGradient id="g2" cx="50%" cy="50%"><stop offset="0%" stop-color="%23c9a84c" stop-opacity="0.1"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs><rect fill="url(%23g2)" width="1440" height="400"/></svg>');
+            background-size: cover;
+        }
+        .cta-banner .container { position: relative; z-index: 1; }
+        .cta-banner h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+        .cta-banner p {
+            font-size: 19px;
+            color: var(--gray-300);
+            margin-bottom: 36px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--navy);
+            color: var(--gray-300);
+            padding: 80px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        .footer-about .logo { margin-bottom: 20px; }
+        .footer-about .logo .name { color: var(--white); }
+        .footer-about .logo .tagline { color: var(--gray-300); }
+        .footer-about p {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+        .footer-social {
+            display: flex;
+            gap: 12px;
+        }
+        .footer-social a {
+            width: 42px;
+            height: 42px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .footer-social a:hover {
+            background: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
+        }
+
+        .footer h4 {
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a {
+            color: var(--gray-300);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--gold); }
+
+        .footer-contact-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            align-items: flex-start;
+        }
+        .footer-contact-item i {
+            color: var(--gold);
+            margin-top: 4px;
+            width: 18px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        /* ========== FLOATING CTA ========== */
+        .floating-cta {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .float-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .float-btn:hover { transform: scale(1.1); }
+        .float-btn.phone {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .hero .container { grid-template-columns: 1fr; }
+            .hero-visual { display: none; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .process-steps { grid-template-columns: repeat(2, 1fr); }
+            .process-steps::before { display: none; }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+            .hero { min-height: 80vh; }
+            .hero-stats { gap: 32px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .process-steps { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .section-pad { padding: 60px 0; }
+            .trust-items { gap: 30px; }
+        }
+
+        /* ========== ANIMATIONS ========== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate { opacity: 0; }
+        .animate.visible {
+            animation: fadeUp 0.7s ease forwards;
+        }
+        .animate.visible.delay-1 { animation-delay: 0.1s; }
+        .animate.visible.delay-2 { animation-delay: 0.2s; }
+        .animate.visible.delay-3 { animation-delay: 0.3s; }
+        .animate.visible.delay-4 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div>🇺🇸 Proudly Veteran-Owned &amp; Operated &mdash; Serving Our Community with Honor</div>
+            <div class="top-bar-right">
+                <span><i class="fas fa-clock"></i> Mon–Sat: 7AM – 7PM</span>
+                <span><i class="fas fa-map-marker-alt"></i> Local Service Area</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="logo-text">
+                    <span class="name">Veterans Remodeling &amp; Plumbing</span>
+                    <span class="tagline">Service. Honor. Excellence.</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="tel:+15551234567" class="btn btn-gold"><i class="fas fa-phone"></i> Call Now</a>
+            </div>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-medal"></i>
+                    Veteran-Owned &amp; Trusted
+                </div>
+                <h1>Expert Plumbing &amp; <span>Remodeling</span> You Can Count On</h1>
+                <p class="hero-sub">From emergency repairs to full remodels — we bring military precision, honest pricing, and 5-star service to every home we touch.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+15551234567" class="btn btn-gold"><i class="fas fa-phone"></i> Get Free Estimate</a>
+                    <a href="#services" class="btn btn-outline"><i class="fas fa-wrench"></i> Our Services</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="number">500+</div>
+                        <div class="label">Jobs Completed</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="number">4.8★</div>
+                        <div class="label">Google Rating</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="number">24/7</div>
+                        <div class="label">Emergency Service</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <h3>📋 Request a Free Quote</h3>
+                    <p>Tell us what you need — we'll get back to you fast.</p>
+                    <form id="quoteForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="" disabled selected>Select Service</option>
+                                <option>Water Heater Install/Repair</option>
+                                <option>Leak Detection & Repair</option>
+                                <option>Bathroom Remodeling</option>
+                                <option>Kitchen Plumbing</option>
+                                <option>Drain Cleaning</option>
+                                <option>General Plumbing</option>
+                                <option>Emergency Repair</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Brief description of your issue..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold">
+                            <i class="fas fa-paper-plane"></i> Send Request
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item"><i class="fas fa-shield-alt"></i> Licensed &amp; Insured</div>
+                <div class="trust-item"><i class="fas fa-award"></i> Veteran-Owned Business</div>
+                <div class="trust-item"><i class="fas fa-dollar-sign"></i> Transparent Pricing</div>
+                <div class="trust-item"><i class="fas fa-home"></i> Home Warranty Accepted</div>
+                <div class="trust-item"><i class="fas fa-star"></i> 4.8★ Google Reviews</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services section-pad" id="services">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge"><i class="fas fa-wrench"></i> What We Do</div>
+                <h2>Professional Services Built on <span class="text-gold">Trust</span></h2>
+                <p>Comprehensive plumbing and remodeling solutions for homeowners who demand quality, reliability, and fair pricing.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate">
+                    <div class="service-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Water Heater Services</h3>
+                    <p>Installation, repair, and replacement of tank and tankless water heaters. Fast turnaround and warranty-approved work.</p>
+                </div>
+                <div class="service-card animate delay-1">
+                    <div class="service-icon"><i class="fas fa-tint"></i></div>
+                    <h3>Leak Detection &amp; Repair</h3>
+                    <p>Advanced leak detection technology to find and fix leaks fast — before they become costly water damage.</p>
+                </div>
+                <div class="service-card animate delay-2">
+                    <div class="service-icon"><i class="fas fa-bath"></i></div>
+                    <h3>Bathroom Remodeling</h3>
+                    <p>Complete bathroom transformations from concept to completion. Modern designs, quality materials, expert craftsmanship.</p>
+                </div>
+                <div class="service-card animate delay-3">
+                    <div class="service-icon"><i class="fas fa-sink"></i></div>
+                    <h3>Kitchen Plumbing</h3>
+                    <p>Faucet installation, garbage disposals, dishwasher hookups, and full kitchen plumbing upgrades.</p>
+                </div>
+                <div class="service-card animate delay-4">
+                    <div class="service-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Drain &amp; Sewer Services</h3>
+                    <p>Professional drain cleaning, sewer line repair, and preventive maintenance to keep your system flowing.</p>
+                </div>
+                <div class="service-card animate">
+                    <div class="service-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Emergency Repairs</h3>
+                    <p>Burst pipe? Major leak? We respond fast with 24/7 emergency plumbing services when you need us most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="why-us section-pad" id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge" style="border-color: rgba(201,168,76,0.4);"><i class="fas fa-medal"></i> The Veterans Difference</div>
+                <h2>Why Homeowners <span class="text-gold">Choose Us</span></h2>
+                <p>We bring military discipline, honest communication, and genuine care to every job — big or small.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card animate">
+                    <div class="why-card-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Honest &amp; Transparent</h3>
+                    <p>No hidden fees. No surprise charges. We explain everything upfront and make sure you're in agreement before any work starts.</p>
+                </div>
+                <div class="why-card animate delay-1">
+                    <div class="why-card-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Fast &amp; Reliable</h3>
+                    <p>We show up on time, communicate clearly, and get the job done right the first time. Military punctuality is in our DNA.</p>
+                </div>
+                <div class="why-card animate delay-2">
+                    <div class="why-card-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Home Warranty Experts</h3>
+                    <p>We work seamlessly with Choice Home Warranty and other providers. We pick up claims fast and handle the coordination for you.</p>
+                </div>
+                <div class="why-card animate delay-3">
+                    <div class="why-card-icon"><i class="fas fa-heart"></i></div>
+                    <h3>Community-First Values</h3>
+                    <p>As veterans, service is more than a job — it's a calling. We treat every home like our own and every customer like family.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews section-pad" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge"><i class="fas fa-star"></i> Real Reviews</div>
+                <h2>What Our <span class="text-gold">Customers Say</span></h2>
+                <p>Don't just take our word for it — hear from the hundreds of homeowners who trust us with their homes.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card animate">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"I had an excellent experience. The technician was knowledgeable and straightforward. I was so impressed that I specifically requested them again to fix my leak."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">KG</div>
+                        <div>
+                            <div class="review-name">Katrina Gross</div>
+                            <div class="review-source">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card animate delay-1">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Jeff is a great guy and super knowledgeable. He installed a new water heater after my 23-year-old one busted! He made sure I was taken care of the entire time."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">AT</div>
+                        <div>
+                            <div class="review-name">Autumn Taylor</div>
+                            <div class="review-source">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card animate delay-2">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Jeff was so great — sometimes warranty repairs can take forever, but Jeff was easy to get ahold of and gave me advice on future repairs too. Very honest and trustworthy."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">CH</div>
+                        <div>
+                            <div class="review-name">Cassandra Hornback</div>
+                            <div class="review-source">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card animate">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Jeff picked up my claim within minutes! Was at my home the next morning. Provided a hot water solution until the new heater was installed. Best experience with Choice Home Warranty yet!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">KH</div>
+                        <div>
+                            <div class="review-name">Kim Hardin</div>
+                            <div class="review-source">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card animate delay-1">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Knowledgeable, experienced, and skilled. Jeff came out on short notice on a Sunday because we had a significant leak, and he got us fixed up right away. Highly recommend."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">IT</div>
+                        <div>
+                            <div class="review-name">Isaac Thomsen</div>
+                            <div class="review-source">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card animate delay-2">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Jeff fixed our water pressure issue in under 3 hours. Professional, polite, respectful, and efficient. Identified and purchased the most affordable and effective solution."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">JG</div>
+                        <div>
+                            <div class="review-name">J G</div>
+                            <div class="review-source">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card animate">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"From the moment they were assigned by my warranty, Jeff was ready to help. He showed up exactly at the appointment time and knew immediately what the issue was. 5 stars!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">LA</div>
+                        <div>
+                            <div class="review-name">Lilly Alvarado</div>
+                            <div class="review-source">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card animate delay-1">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"My technician Jameson was amazing. He stayed in communication throughout the entire process. Can't say enough good things about him. Veterans Remodeling picked up my ticket fast."</p>
+                    <div class="review-author">
+                        <div class="review-avatar">BH</div>
+                        <div>
+                            <div class="review-name">Betty Hardeman</div>
+                            <div class="review-source">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card animate delay-2">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Jeff is a very friendly person and an expert in plumbing repairs. He finished the job quickly and with high-quality workmanship. He also works with home insurance. Highly recommend!"</p>
+                    <div class="review-author">
+                        <div class="review-avatar">JD</div>
+                        <div>
+                            <div class="review-name">Jenny Diaz</div>
+                            <div class="review-source">Google Review</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section section-pad" id="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="badge"><i class="fas fa-list-ol"></i> How It Works</div>
+                <h2>Simple <span class="text-gold">4-Step</span> Process</h2>
+                <p>From first call to finished job — we make it easy.</p>
+            </div>
+            <div class="process-steps">
+                <div class="step animate">
+                    <div class="step-number">1</div>
+                    <h3>Call or Request</h3>
+                    <p>Reach out by phone or fill out our quote form. We respond within minutes.</p>
+                </div>
+                <div class="step animate delay-1">
+                    <div class="step-number">2</div>
+                    <h3>Free Assessment</h3>
+                    <p>We come to your home, inspect the issue, and explain everything — no pressure.</p>
+                </div>
+                <div class="step animate delay-2">
+                    <div class="step-number">3</div>
+                    <h3>Expert Repair</h3>
+                    <p>Our skilled technicians get it done right the first time with quality materials.</p>
+                </div>
+                <div class="step animate delay-3">
+                    <div class="step-number">4</div>
+                    <h3>Satisfaction Guaranteed</h3>
+                    <p>We walk you through the work, ensure you're happy, and stand behind every job.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner" id="contact">
+        <div class="container">
+            <h2>Ready to Get Your Home <span class="text-gold">Fixed Right?</span></h2>
+            <p>Whether it's a dripping faucet or a full bathroom remodel — one call gets it done.</p>
+            <div class="cta-buttons">
+                <a href="tel:+15551234567" class="btn btn-gold btn-lg"><i class="fas fa-phone"></i> Call Now — Free Estimate</a>
+                <a href="#top" class="btn btn-outline"><i class="fas fa-arrow-up"></i> Request Quote Online</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo">
+                        <div class="logo-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="logo-text">
+                            <span class="name">Veterans Remodeling &amp; Plumbing</span>
+                            <span class="tagline">Service. Honor. Excellence.</span>
+                        </div>
+                    </a>
+                    <p>Veteran-owned and operated, we bring military-grade discipline and integrity to every plumbing and remodeling project. Your home deserves the best.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-yelp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Water Heater Services</a></li>
+                        <li><a href="#">Leak Detection</a></li>
+                        <li><a href="#">Bathroom Remodeling</a></li>
+                        <li><a href="#">Kitchen Plumbing</a></li>
+                        <li><a href="#">Drain Cleaning</a></li>
+                        <li><a href="#">Emergency Repairs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Home Warranty Info</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <div style="color: var(--white); font-weight: 600;">(555) 123-4567</div>
+                            <div style="font-size: 13px;">Mon–Sat: 7AM – 7PM</div>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <div>info@veteransplumbing.com</div>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <div>Serving the Greater Metro Area</div>
+                            <div style="font-size: 13px;">Licensed &amp; Insured</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Veterans Remodeling &amp; Plumbing Services. All rights reserved.</div>
+                <div>Veteran-Owned. Community-Trusted. 🇺🇸</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING CTA -->
+    <div class="floating-cta">
+        <a href="tel:+15551234567" class="float-btn phone" title="Call Us">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+        // Form submission
+        document.getElementById('quoteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Request Sent!';
+            btn.style.background = '#22c55e';
+            btn.style.boxShadow = '0 4px 20px rgba(34,197,94,0.4)';
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.background = '';
+                btn.style.boxShadow = '';
+                this.reset();
+            }, 3000);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
